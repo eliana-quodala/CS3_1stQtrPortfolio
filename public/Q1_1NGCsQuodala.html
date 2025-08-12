@@ -3,12 +3,19 @@
     <script> 
         // let, var, const
         // combining strings : concatenation
-        console.log = 
-        let age=13
-        let maxAge=80
-        let numPerDay = 3
-        totalRequired = (numPerDay * 365) * (maxAge - age)
-        document.write ("You will need " + totalRequired + " snacks to last you until the ripe old age of " + 80)
+        let age = prompt("Enter your age" , "14");
+        let maxAge= prompt("Enter maximum age", "80");
+        let numPerDay = prompt("Enter number of snacks consumed per day" , "3");
+        var answer;
+        if(confirm("Are all information correct?" + confirm(yes))) {
+            totalRequired = (numPerDay * 365) * (maxAge - age)
+            document.write ("You will need " + totalRequired + " snacks to last you until the ripe old age of " + maxAge);
+        } else {
+            document.write("Run code again.");
+        }
+        
+       
+
 
     </script>
 </body>
