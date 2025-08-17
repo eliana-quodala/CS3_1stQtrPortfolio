@@ -2,21 +2,41 @@
 <html>
     <body>
         <h2> Q1 2nd Graded Exercise submitted by Eliana Gabrielle Victoria M. Quodala of 9Cesium </h2>
+        <footer>
+            <p> Source: GeeksforGeeks. (2022, October 4). 
+            <em>JavaScript Number parseFloat() Method</em>. 
+            <a href="https://www.geeksforgeeks.org/javascript/javascript-number-parsefloat-method/" target="_blank">
+                https://www.geeksforgeeks.org/javascript/javascript-number-parsefloat-method/
+            </a>
+            </p>
+        </footer>
+
+
         <label> Meal Price:
-            <input id="price">
-        </label></br>
+            <input id="mp">
+        </label><br>
+        
         <label> Tip:
             <input id="tip">
-        </label></br>
-        <label> Service Charge:
-            <input id="servcharge">
-        </label></br>
-        <button onclick="totalCost()"> Show Cost</button>
+        </label><br>
+        
+        <label> Service Charge (%):
+            <input id="sc">
+        </label><br>
+        
+        <button onclick="totalCost()">Show Cost</button>
+
         <p> Result: <span id="totalCost"></span></p>
+
         <script> 
             function totalCost() {
-                let dGreet = document.getElementById("greeting").value 
-                document.getElementById("greet").innerHTML = `<p><b> ${dGreet} </b></p>`;
+                let mp = parseFloat(document.getElementById("mp").value);
+                let tip = parseFloat(document.getElementById("tip").value);
+                let sc = parseFloat(document.getElementById("sc").value);
+
+                let total = mp + tip + ((sc / 100) * mp);
+
+                document.getElementById("totalCost").textContent = total.toFixed(2);
             }
         </script>
     </body>
